@@ -1,0 +1,209 @@
+.header {
+  display: flex;
+  width: 100vw;
+  max-height: 100%;
+}
+
+.header .left {
+  position: relative;
+  object-fit: contain;
+  width: 30%;
+  mix-blend-mode: lighten;
+  -webkit-mask-image: linear-gradient(to right, rgb(var(--background-color)), transparent);
+  mask-image: 
+    linear-gradient(to right, rgb(var(--background-color)), transparent),
+    linear-gradient(to bottom, rgb(var(--background-color)) 50%, transparent 100%);
+  mask-composite: intersect;
+}
+
+.header .left img {
+  width: 100%;
+}
+
+.header .right {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2vw;
+  margin-top: 8vw;
+}
+
+.header .right .header-title h1, #header {
+  font-size: 5.5vw;
+  background: -webkit-linear-gradient(rgb(var(--white)) 0%, rgb(var(--aqua-glow)) 60%, rgb(var(--background-color)) 85%);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.2vw;
+}
+
+#header {
+  font-size: 4vw;
+  text-transform: uppercase;
+}
+
+.header .right .header-title p {
+  position: relative;
+  margin-top: -4vw;
+}
+
+#subtitle {
+  font-size: 1vw;
+  color: rgb(var(--white), 0.4);
+}
+
+.main {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  max-height: min-content;
+  padding: 2vw;
+  position: relative;
+}
+
+.main .img-container {
+  flex: 1;
+  position: relative;
+  margin-top: -2vw;
+}
+
+.main .img-container img {
+  width: 100%;
+  mask-image: 
+  linear-gradient(to right, rgb(var(--background-color)) 20%, transparent 100%),
+  linear-gradient(to top, rgb(var(--background-color)) 40%, transparent 100%),
+  linear-gradient(to bottom, rgb(var(--background-color)) 50%, transparent 100%),
+  linear-gradient(to left, rgb(var(--background-color)) 70%, transparent 100%);
+  mask-composite: intersect;
+}
+
+.main .content {
+  margin-left: -8vw;
+  padding: 2vw;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vw;
+  gap: 1vw;
+  position: relative;
+}
+
+.main .content h2 {
+  text-align: center;
+  font-size: 2vw;
+  letter-spacing: 0.15vw;
+  font-family: "Jersey 10", sans-serif;
+  color: rgb(var(--white), 0.6);
+  position: relative;
+  z-index: 2;
+  font-weight: 500;
+}
+
+.main .content .glow {
+  background-color: rgba(var(--aqua-glow), 0.45);
+  border-radius: 100%;
+  position: absolute;
+  box-shadow: 0 0 50px rgb(var(--aqua-glow));
+}
+
+.main .content .glow-1 {
+  width: 1.5vw;
+  height: 1.5vw;
+  top: 5%;
+  left: 10%;
+}
+
+.main .content .glow-2 {
+  width: 4.5vw;
+  height: 4.5vw;
+  top: 20%;
+  left: 50%;
+}
+
+.header .right a button {
+  padding: 1vw 2vw;
+  color: rgb(var(--white));
+  background: linear-gradient(to right, rgba(47, 178, 193, 0.8), 
+  rgba(0, 132, 255, 0.8)); 
+  box-shadow: 0 0 3px rgba(var(--aqua-glow), 1);
+  border: none;
+  outline: none;
+  border-radius: 0.5vw;
+  font-size: 1vw;
+  cursor: none;
+}
+
+.header .right a button:hover,
+.header .right a button:focus {
+  background: linear-gradient(to right, rgba(47, 178, 193, 1), 
+    rgba(0, 132, 255, 1)); 
+  box-shadow: 0 0 3px rgba(var(--aqua-glow), 1);
+}
+
+@media screen and (orientation: portrait) {
+  .header {
+    flex-direction: column-reverse;
+    padding-left: 5vw;
+  }
+  .header .left {
+    width: 60%;
+    margin: 0 auto;
+    mask-image: 
+    linear-gradient(to left, rgb(var(--background-color)) 75%, transparent),
+    linear-gradient(to right, rgb(var(--background-color)) 75%, transparent),
+    linear-gradient(to bottom, rgb(var(--background-color)) 75%, transparent 100%),
+    linear-gradient(to top, rgb(var(--background-color)) 75%, transparent 100%);
+    opacity: 0.5;
+  }
+  .header .right {
+    width: 95%;
+    margin-top: 9vh;
+  }
+  .header .right .header-title h1 {
+    font-size: 3.5vh;
+  }
+  .main .content h2 {
+    font-size: 2vh;
+    font-weight: 200;
+  }
+  .main .content {
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+  .header .right a button {
+    width: 100%;
+    font-size: 1vh;
+    padding: 0.8vh 1.5vh;
+  }
+  #subtitle {
+    font-size: 1.5vh;
+    margin: 1vh auto;
+  }
+  .main .content .glow {
+    background-color: rgba(var(--aqua-glow), 0.25);
+  }
+  .main .content .glow-1 {
+    width: 1.5vh;
+    height: 1.5vh;
+  }
+  .main .content .glow-2 {
+    width: 2.5vh;
+    height: 2.5vh;
+  }
+  #header {
+    font-size: 4vh;
+  }
+}
