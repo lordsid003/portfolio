@@ -1,0 +1,62 @@
+.profile {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -2vw;
+}
+
+.profile .items {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    justify-content: center;
+    margin-left: 5vw;
+    padding-right: 2vw;
+}
+
+.profile .items .profiledata {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile .image {
+    flex: 1;
+    position: relative;
+}
+  
+.profile .image img {
+    width: 100%;
+    object-fit: cover;
+    mask-image: 
+        linear-gradient(to left, rgb(var(--background-color)) 30%, transparent 100%),
+        linear-gradient(to top, rgb(var(--background-color)) 70%, transparent 100%),
+        linear-gradient(to bottom, rgb(var(--background-color)) 70%, transparent 100%),
+        linear-gradient(to right, rgb(var(--background-color)) 30%, transparent 100%);
+    mask-composite: intersect;
+}
+
+@media screen and (orientation: portrait) {
+    .profile {
+        flex-direction: column;
+        padding-left: 7vw;
+    }
+    .profile .items {
+        width: 92%;
+        align-items: center;
+    }
+    .profile .items .profiledata {
+        flex-direction: column;
+    }
+    .profile .image {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .profile .image img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jersey+10&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  cursor: none;
+}
+
+:root {
+  --background-color: 13, 13, 13;
+  --white: 255, 255, 255;
+  --aqua-glow: 0, 213, 255;
+  --font: 78, 188, 219;
+  --sapgreen: #CFF7D3;
+  --green: #02542D;
+}
+
+html, body {
+  background-color: rgb(var(--background-color));
+  cursor: none;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--aqua-glow)) rgb(var(--background-color));
+  scroll-behavior: smooth;
+}
+
+/* WebKit browsers */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(var(--background-color)); 
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--aqua-glow)); 
+  border-radius: 10px; 
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--aqua-glow)); 
+}
+
+.customCursor{
+  width: 20px;
+  height: 20px;
+  background-color: rgb(var(--white));
+  border: 2px solid rgb(var(--white));
+  box-shadow: 0 0 10px rgb(var(--white));
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  position: absolute;
+  z-index: 999;
+}
+
+.sanity__h1 {
+  color: rgba(var(--white), 0.8);
+  font-weight: 450;
+  font-size: 2rem;
+  letter-spacing: 0.06rem;
+  margin: 0.7rem 0;
+}
+
+.sanity__h2 {
+  color: rgba(var(--white), 0.7);
+  font-weight: 450;
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+  margin: 0.7rem 0;
+}
+
+.sanity__p {
+  color: rgba(var(--white), 0.5);
+  font-weight: 300;
+  font-size: 0.9rem;
+  margin-left: 1rem;
+}
+
+.sanity__codeblock {
+  color: rgba(var(--white), 0.6);
+  background-color: rgba(var(--white), 0.09);
+  padding: 0 0.3rem;
+  font-weight: 400;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 0.01rem;
+}
+
+.sanity__list {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: rgba(var(--white), 0.5);
+}
+
+@keyframes slide-fade-in {
+  from {
+      opacity: 0;
+      transform: translateY(2vh);
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .customCursor {
+    display: none;
+  }
+}
