@@ -3,7 +3,7 @@ export const Images = {
     "web": require("../assets/web.gif"),
     "app": require("../assets/app.gif"),
     "city": require("../assets/city.gif"),
-    "portfolioImage": require("../assets/portfolioImg.png"),
+    "portfolioImage": require("../assets/microsoft_cc3.jpg"),
     "star": require("../assets/aestheticstar.png"),
     "golang": require("../assets/golang2.png"),
     "github": require("../assets/github.png")

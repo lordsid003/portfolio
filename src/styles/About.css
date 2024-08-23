@@ -28,6 +28,7 @@
 
 .about .about-img-wrapper p {
     color: rgba(var(--white), 0.3);
+    font-size: 0.9rem;
 }
 
 .about .about-content {
@@ -94,4 +95,49 @@
 .footer .footer-links ul li a {
     text-decoration: none;
     color: rgba(var(--aqua-glow), 0.6);
+}
+
+@media screen and (orientation: portrait) {
+    .about {
+        width: 90%;
+    }
+    .about .about-img-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about .about-img-wrapper img {
+        width: 60%;
+    }
+    .about .about-img-wrapper p {
+        font-size: 0.7rem;
+    }
+    .about .about-img-wrapper div div {
+        align-self: "center";
+    }
+    .about .about-content {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .about .about-content .about-title {
+        font-size: 1.5rem;
+    }
+    .about .about-content ul {
+        font-size: 0.7rem;
+    }
+    .footer {
+        width: 90%;
+        padding: 1rem;
+        font-size: 0.8rem; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer .footer-header {
+        font-size: 0.6rem;
+    }
+    .footer .footer-links {
+        font-size: 0.8rem;
+    }
 }

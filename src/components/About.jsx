@@ -10,10 +10,12 @@ const About = () => {
                     alt="About section"
                 />
                 <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "1.5rem" }}>
-                    <h3 id="header">About Me</h3>
-                    <p style={{ padding: "1rem" }}>
-                    I'm a pre-final year student at Maharaja Surajmal Institute Of Technology, New Delhi pursuing Bachelors in Technology in Computer Science & Engineering. My major domains of interest include App Development & Machine Learning.
-                    </p>
+                    <div>
+                        <h3 id="header">About Me</h3>
+                        <p style={{ padding: "1rem" }}>
+                            I'm a pre-final year student at Maharaja Surajmal Institute Of Technology, New Delhi pursuing Bachelors in Technology in Computer Science & Engineering. My major domains of interest include App Development & Machine Learning.
+                        </p>
+                    </div>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "2rem" }}>
                         <a href="https://drive.google.com/file/d/1Ki-wMdLs19Wk9EYObdlawb4rbLqwBlau/view?usp=sharing" target="blank" id="main-button">
                             <button>Download CV</button>

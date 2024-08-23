@@ -4,7 +4,7 @@ import "../styles/Navbar.css";
 
 const Navbar = () => {
     const [activeItem, setActiveItem] = useState("profile");
-    const [showNavbar, setShowNavbar] = useState(false);
+    const [showNavBar, setShowNavBar] = useState(false);
 
     const tabHandler = (item) => {
         setActiveItem(item);
@@ -14,17 +14,16 @@ const Navbar = () => {
         "profile", "projects", "about", "socials",
     ];
 
-    const navbarDisplay = document.querySelector("#nav-items");
-
     const handleClick = () => {
-        setShowNavbar(!showNavbar);
-        if(showNavbar) {
-            navbarDisplay.style.display = "block";
+        var NavBar = document.querySelector("#nav-items");
+        NavBar.classList.toggle("show");
+        if (NavBar.style.display === "flex") {
+            NavBar.style.display = "none";
+            setShowNavBar(false);
+        } else {
+            NavBar.style.display = "flex";
+            setShowNavBar(true);
         }
-        else {
-            navbarDisplay.style.display = "none";
-        }
-        console.log(showNavbar);
     };
 
     return (
@@ -52,9 +51,11 @@ const Navbar = () => {
                         })
                     }
                 </div>
-                <button className="menu-btn">
+                <button className="menu-btn" onClick={handleClick}>
                     <span className="material-symbols-outlined menu">
-                            menu
+                            {
+                                !showNavBar ? "menu" : "close"
+                            }
                     </span>
                 </button>
             </div>
