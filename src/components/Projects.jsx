@@ -1,4 +1,3 @@
-import { Images } from "../constants/Images";
 import "../styles/Project.css";
 import ProjectCard from "../Templates/ProjectCard";
 import { useEffect, useState } from "react";
@@ -28,16 +27,16 @@ const Projects = () => {
 
     return (
         <div className="project section" id="projects">
-            <div className="project-img">
-                <img
-                    src={Images.catwindow}
-                    alt="cat sitting by a street lamp"
-                />
-            </div>
             <div className="project-content">
-                <h2 id="header">
-                    Featured Projects
-                </h2>
+                <div>
+                    <h2 id="header">
+                        Featured Projects
+                    </h2>
+                    <p id="subtitle" className="project-subtitle">
+                        Hover over the project card to explore project details. These projects are made in Hackathons or for personal learning. The project details include source code, deployment links, features and technical schema.
+                    </p>
+                </div>
+                
                 <div className="gallery">
                     {
                         data.map((item, index) => {
@@ -53,11 +52,6 @@ const Projects = () => {
                             )
                         })
                     }
-                </div>
-                <div>
-                    <p id="subtitle">
-                        ** Personal and Hackathon projects
-                    </p>
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 .card {
-    width: 40%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,10 +7,11 @@
     padding: 2vw;
     border-radius: 1vw;
     box-shadow: inset 0 0 30px rgba(var(--background-color), 0.7);
+    opacity: 0.8;
 }
 
 .card img {
-    width: 95%;
+    width: 90%;
 }
 
 .card .content {
@@ -23,17 +24,18 @@
 
 .card .content h3 {
     font-family: "Jersey 10", sans-serif;
-    font-size: 2vw;
+    font-size: 1.5rem;
     font-weight: 100;
+    text-align: center;
 }
 
 .card .content p {
-    font-size: 1.8vh;
+    font-size: 0.9rem;
 }
 
 @media screen and (orientation: portrait) {
     .card {
-        width: 93%;
+        width: 100%;
         flex-direction: row;
         padding: 2vh;
         box-shadow: inset 0 0 10px rgba(var(--background-color), 0.7);
@@ -43,13 +45,12 @@
     }
     .card .content {
         flex: 1;
+        gap: 0.5rem;
     }
     .card .content h3 {
-        font-size: 2vh;
+        font-size: 0.9rem;
     }
     .card .content p {
-        font-size: 1.2vh;
+        font-size: 0.5rem;
     }
 }
-
-

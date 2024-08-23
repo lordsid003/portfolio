@@ -4,6 +4,7 @@ import "../styles/Navbar.css";
 
 const Navbar = () => {
     const [activeItem, setActiveItem] = useState("profile");
+    const [showNavbar, setShowNavbar] = useState(false);
 
     const tabHandler = (item) => {
         setActiveItem(item);
@@ -13,37 +14,18 @@ const Navbar = () => {
         "profile", "projects", "about", "socials",
     ];
 
-    useEffect(() => {
-        const sections = document.querySelectorAll('.section');
-        const navLinks = document.querySelectorAll('.nav-item');
+    const navbarDisplay = document.querySelector("#nav-items");
 
-        const options = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.6
-        };
-
-        const callback = (entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.getAttribute('id');
-                    setActiveItem(id);
-                }
-            });
-        };
-
-        const observer = new IntersectionObserver(callback, options);
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-
-        return () => {
-            if (observer && sections) {
-                sections.forEach(section => observer.unobserve(section));
-            }
-        };
-    }, []);
+    const handleClick = () => {
+        setShowNavbar(!showNavbar);
+        if(showNavbar) {
+            navbarDisplay.style.display = "block";
+        }
+        else {
+            navbarDisplay.style.display = "none";
+        }
+        console.log(showNavbar);
+    };
 
     return (
         <div className="navbar-container">
@@ -54,7 +36,7 @@ const Navbar = () => {
                         alt="logo"
                     />
                 </div>
-                <div className="items">
+                <div className="items" id="nav-items">
                     {
                         items.map((item, index) => {
                             return (
@@ -70,6 +52,11 @@ const Navbar = () => {
                         })
                     }
                 </div>
+                <button className="menu-btn">
+                    <span className="material-symbols-outlined menu">
+                            menu
+                    </span>
+                </button>
             </div>
         </div>
     );

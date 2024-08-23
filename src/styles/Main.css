@@ -4,22 +4,6 @@
   max-height: 100%;
 }
 
-.header .left {
-  position: relative;
-  object-fit: contain;
-  width: 30%;
-  mix-blend-mode: lighten;
-  -webkit-mask-image: linear-gradient(to right, rgb(var(--background-color)), transparent);
-  mask-image: 
-    linear-gradient(to right, rgb(var(--background-color)), transparent),
-    linear-gradient(to bottom, rgb(var(--background-color)) 50%, transparent 100%);
-  mask-composite: intersect;
-}
-
-.header .left img {
-  width: 100%;
-}
-
 .header .right {
   width: 60%;
   margin: 0 auto;
@@ -28,33 +12,49 @@
   align-items: center;
   justify-content: center;
   padding: 2vw;
-  margin-top: 8vw;
+  margin-top: 4rem;
 }
 
 .header .right .header-title h1, #header {
-  font-size: 5.5vw;
-  background: -webkit-linear-gradient(rgb(var(--white)) 0%, rgb(var(--aqua-glow)) 60%, rgb(var(--background-color)) 85%);
+  font-size: 3.5vw;
+  background: -webkit-linear-gradient(rgb(var(--white)) 0%, rgb(var(--aqua-glow)) 50%, rgba(var(--background-color), 0.4) 95%);
   background-clip: content-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "Jersey 10", sans-serif;
-  font-weight: 200;
-  letter-spacing: 0.2vw;
+  font-weight: 350;
 }
 
-#header {
-  font-size: 4vw;
-  text-transform: uppercase;
-}
-
-.header .right .header-title p {
+.header .right .header-title {
   position: relative;
-  margin-top: -4vw;
+  margin-top: -3vw;
+}
+
+.header .right .header-title h3 {
+  color: rgb(var(--white), 0.5);
+  margin: 0 auto;
+  font-size: 1rem;
+  font-weight: 400;
+  width: 80%;
 }
 
 #subtitle {
-  font-size: 1vw;
-  color: rgb(var(--white), 0.4);
+  font-size: 0.9rem;
+  color: rgb(var(--white), 0.3);
+  width: 80%;
+  font-weight: 300;
+}
+
+.main-subtitle {
+  margin: 0 auto;
+}
+
+#subtitle a {
+  color: rgba(var(--aqua-glow), 0.6);
+}
+
+#subtitle a:hover, 
+#subtitle a:focus {
+  text-decoration: underline;
 }
 
 .main {
@@ -72,14 +72,14 @@
 .main .img-container {
   flex: 1;
   position: relative;
-  margin-top: -2vw;
+  margin-top: -3.5vw;
 }
 
 .main .img-container img {
   width: 100%;
   mask-image: 
-  linear-gradient(to right, rgb(var(--background-color)) 20%, transparent 100%),
-  linear-gradient(to top, rgb(var(--background-color)) 40%, transparent 100%),
+  linear-gradient(to right, rgb(var(--background-color)) 30%, transparent 100%),
+  linear-gradient(to top, rgb(var(--background-color)) 30%, transparent 100%),
   linear-gradient(to bottom, rgb(var(--background-color)) 50%, transparent 100%),
   linear-gradient(to left, rgb(var(--background-color)) 70%, transparent 100%);
   mask-composite: intersect;
@@ -103,34 +103,41 @@
   font-size: 2vw;
   letter-spacing: 0.15vw;
   font-family: "Jersey 10", sans-serif;
-  color: rgb(var(--white), 0.6);
+  color: rgb(var(--white), 0.5);
   position: relative;
   z-index: 2;
   font-weight: 500;
 }
 
 .main .content .glow {
-  background-color: rgba(var(--aqua-glow), 0.45);
+  background-color: rgba(var(--aqua-glow), 0.5);
   border-radius: 100%;
   position: absolute;
-  box-shadow: 0 0 50px rgb(var(--aqua-glow));
+  box-shadow: 0 0 20px rgb(var(--aqua-glow));
 }
 
 .main .content .glow-1 {
   width: 1.5vw;
   height: 1.5vw;
-  top: 5%;
+  bottom: 25%;
   left: 10%;
 }
 
 .main .content .glow-2 {
-  width: 4.5vw;
-  height: 4.5vw;
-  top: 20%;
-  left: 50%;
+  width: 1vw;
+  height: 1vw;
+  top: 5%;
+  right: 15%;
 }
 
-.header .right a button {
+.main .content .glow-3 {
+  width: 2vw;
+  height: 2vw;
+  top: 0%;
+  right: 0%;
+}
+
+#main-button button{
   padding: 1vw 2vw;
   color: rgb(var(--white));
   background: linear-gradient(to right, rgba(47, 178, 193, 0.8), 
@@ -143,54 +150,60 @@
   cursor: none;
 }
 
-.header .right a button:hover,
-.header .right a button:focus {
+#main-button button:hover,
+#main-button button:focus {
   background: linear-gradient(to right, rgba(47, 178, 193, 1), 
     rgba(0, 132, 255, 1)); 
   box-shadow: 0 0 3px rgba(var(--aqua-glow), 1);
 }
 
 @media screen and (orientation: portrait) {
-  .header {
-    flex-direction: column-reverse;
-    padding-left: 5vw;
-  }
-  .header .left {
-    width: 60%;
-    margin: 0 auto;
-    mask-image: 
-    linear-gradient(to left, rgb(var(--background-color)) 75%, transparent),
-    linear-gradient(to right, rgb(var(--background-color)) 75%, transparent),
-    linear-gradient(to bottom, rgb(var(--background-color)) 75%, transparent 100%),
-    linear-gradient(to top, rgb(var(--background-color)) 75%, transparent 100%);
-    opacity: 0.5;
-  }
   .header .right {
     width: 95%;
-    margin-top: 9vh;
+    margin-top: 3rem;
   }
   .header .right .header-title h1 {
-    font-size: 3.5vh;
+    font-size: 2rem;
+    text-align: center;
+    background: -webkit-linear-gradient(rgb(var(--white)) 0%, rgb(var(--aqua-glow)) 50%, rgba(var(--background-color), 0.4) 100%);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #header {
+    font-size: 2rem;
+    align-self: flex-start;
+    padding: 1rem;
+  }
+  .main {
+    flex-direction: column;
+    margin: 0 auto;
   }
   .main .content h2 {
-    font-size: 2vh;
+    font-size: 1.2rem;
     font-weight: 200;
+  }
+  .main .img-container {
+    margin-top: -1rem;
   }
   .main .content {
     margin: 0 auto;
-    width: 50%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     gap: 2vh;
   }
-  .header .right a button {
+  #main-button button{
     width: 100%;
-    font-size: 1vh;
-    padding: 0.8vh 1.5vh;
+    font-size: 0.6rem;
+    padding: 0.7rem 1.5rem;
+    margin-bottom: 1.5rem;
   }
   #subtitle {
-    font-size: 1.5vh;
-    margin: 1vh auto;
+    font-size: 0.6rem;
+  }
+  .main-subtitle {
+    margin: 0.5rem auto;
   }
   .main .content .glow {
     background-color: rgba(var(--aqua-glow), 0.25);
@@ -202,8 +215,5 @@
   .main .content .glow-2 {
     width: 2.5vh;
     height: 2.5vh;
-  }
-  #header {
-    font-size: 4vh;
   }
 }

@@ -2,7 +2,8 @@ import { Colors, Images } from "./Images";
 
 export const cardItems = [
     {
-        "title": "Machine Learning (PyTorch, Tensorflow)",
+        "title": "Machine Learning",
+        "tech": "PyTorch, Tensorflow",
         "description": `
             Deep Learning for GenAI applications (NLP and Vision). 
             Made projects for implementation of core ML algorithms.
@@ -13,7 +14,8 @@ export const cardItems = [
         "tag": "aiml",
     },
     {
-        "title": "App Development (React Native)",
+        "title": "App Development",
+        "tech": "React Native, Redux",
         "description": `
             Seamless UI and efficient functionality for cross-platform applications
             using React Native. Primary Hackathon skill for me.
@@ -24,7 +26,8 @@ export const cardItems = [
         "tag": "appdev"
     },
     {
-        "title": "Backend Development (Golang, Flask)",
+        "title": "Backend Development",
+        "tech": "Golang, Flask",
         "description": `
             Designing full-fledged web applications with strong backend functionality, APIs, state management & databases.
         `,

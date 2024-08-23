@@ -1,8 +1,5 @@
 .navbar-container {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: calc(50% - 60% * 0.5);
+  margin: 1rem auto;
   width: 60%;
   line-height: 2rem;
   display: flex;
@@ -16,16 +13,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 0.3px solid rgba(var(--aqua-glow), 0.2);
 }
 
 .navbar-container .navbar .logo {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 1vw;
 }
  
 .navbar-container .navbar .logo img {
-  width: 7vw;
+  width: 5vw;
 }
  
 .navbar-container .navbar .items {
@@ -48,45 +47,39 @@
   border-radius: 0.4rem;
 }
 
-.navbar-container .navbar .items .active {
+.navbar-container .navbar .items .nav-item:hover,
+.navbar-container .navbar .items .nav-item:focus {
   color: rgb(var(--white));
-  background-color: rgba(var(--aqua-glow), 0.4);
+}
+
+.navbar-container .navbar .menu {
+  font-size: 1rem;
+  color:rgba(var(--white), 0.5);
+  display: none;
+}
+
+.navbar-container .navbar .menu-btn {
+  display: none;
 }
 
 @media screen and (orientation: portrait) {
   .navbar-container {
-    width: 20%;
-    left: 0;
-    top: 1vh;
-    flex-direction: column;
+    width: 95%;
+  }
+  .menu-btn {
+    background-color: transparent;
+  }
+  .navbar-container .navbar .menu {
+    display: block;
+    font-size: 1.5rem;
+  }
+  .navbar-container .navbar .menu-btn {
+    display: block;
   }
   .navbar-container .navbar .logo img {
     width: 8vh;
   }
-  .navbar-container .navbar {
-    flex-direction: column;
-  }
   .navbar-container .navbar .items {
-    position: fixed;
-    top: 50%;
-    transform: translate(-20%, -50%);
-    flex-direction: column;
-    background-color: rgba(var(--white), 0.05);
-    border-radius: 0.5rem;
-    font-size: 1vh;
-    padding: 0.5vh;
-  }
-  .navbar-container .navbar .items .nav-item {
-    width: 100%;
-    padding: 0 0.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.2rem;
-  }
-  .navbar-container .navbar .items .active {
-    color: rgb(var(--white));
-    background-color: rgba(var(--aqua-glow), 0.5);
-    border: none;
+    display: none;
   }
 }

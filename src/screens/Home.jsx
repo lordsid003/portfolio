@@ -5,6 +5,7 @@ import Main from "../components/Main";
 import Profile from "../components/Profile";
 import Projects from "../components/Projects";
 import About from "../components/About";
+import Footer from "../components/Footer";
 
 const Home = () => {
 
@@ -28,18 +29,22 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", gap: "6rem" }}>
       <div className="customCursor"></div>
 
-      <Navbar />
+      <div>
+        <Navbar />
 
-      <Main />
+        <Main />
+      </div>
 
       <Profile />
 
       <Projects />
 
       <About />
+
+      <Footer />
     </div>
   );
 };

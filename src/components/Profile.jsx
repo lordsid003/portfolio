@@ -1,4 +1,3 @@
-import { Colors, Images } from "../constants/Images";
 import Card from "../Templates/Card";
 import "../styles/Profile.css";
 import { cardItems } from "../constants/Data";
@@ -18,6 +17,7 @@ const Profile = () => {
                                 <Card
                                     key={index.toString()}
                                     imgUrl={item.image}
+                                    tech={item.tech}
                                     description={item.description}
                                     title={item.title}
                                     color={item.color}
@@ -28,12 +28,6 @@ const Profile = () => {
                         })
                     }
                 </div>
-            </div>
-            <div className="left image">
-                <img
-                    src={Images.cat}
-                    alt="cat sitting by a street lamp"
-                />
             </div>
         </div>
     );
