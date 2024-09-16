@@ -17,7 +17,7 @@ const About = () => {
                         </p>
                     </div>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "2rem" }}>
-                        <a href="https://drive.google.com/file/d/1Ki-wMdLs19Wk9EYObdlawb4rbLqwBlau/view?usp=sharing" target="blank" id="main-button">
+                        <a href="https://drive.google.com/file/d/1-fKkZV4AF5YVQnYVgUXDqeZSzLZoGSGS/view?usp=sharing" target="blank" id="main-button">
                             <button>Download CV</button>
                         </a>
                         <a href="https://github.com/lordsid003" target="blank" id="main-button">
