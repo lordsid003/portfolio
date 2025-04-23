@@ -30,7 +30,7 @@ const Projects = () => {
             <div className="project-content">
                 <div>
                     <h2 id="header">
-                        Featured Projects
+                        Project Gallery
                     </h2>
                     <p id="subtitle" className="project-subtitle">
                         Hover over the project card to explore project details. These projects are made in Hackathons or for personal learning. The project details include source code, deployment links, features and technical schema.

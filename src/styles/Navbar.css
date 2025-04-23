@@ -3,6 +3,9 @@
   width: 60%;
   line-height: 2rem;
   display: flex;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   align-items: center;
   justify-content: center;
   padding: 0 2vh;
@@ -13,26 +16,28 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 0.3px solid rgba(var(--aqua-glow), 0.2);
 }
 
-.navbar-container .navbar .logo {
-  display: flex;
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
   align-items: center;
   justify-content: center;
-  margin-left: 1vw;
+  padding: 2rem;
 }
 
-.navbar-container .navbar .logo img {
-  width: 5vw;
+.logo img {
+  width: 6vw;
 }
 
 .navbar-container .navbar .items {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 4vw;
+  gap: 2vh;
   line-height: 2rem;
-  font-size: 1vw;
+  font-size: 0.8rem;
   background-color: rgba(var(--background-color), 0.5);
   padding: 0.5vw 1.5vw;
   border-radius: 0.5rem;
@@ -40,11 +45,38 @@
 
 .navbar-container .navbar .items .nav-item {
   text-decoration: none;
-  color: rgba(var(--white), 0.5);
-  cursor: pointer;
+  font-size: 0.5rem;
+  letter-spacing: 0.1rem;
+  color: rgba(var(--aqua-glow), 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-container .navbar .items .nav-item button {
   text-transform: capitalize;
-  padding: 0 1vw;
-  border-radius: 0.4rem;
+  display: flex;
+  border: 1px solid rgba(var(--aqua-glow), 1);
+  box-shadow: inset 0 0 8px rgba(var(--aqua-glow), 1);
+  border-radius: 100%;
+  background-color: transparent;
+  width: 3rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  color: rgba(var(--aqua-glow), 1);
+}
+
+.navbar-container .navbar .items .nav-item button .icon {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.navbar-container .navbar .items .active button {
+  background-color: rgba(var(--aqua-glow), 1);
+  box-shadow: 0 0 8px rgba(var(--aqua-glow), 1);
+  color: rgba(var(--background-color), 0.8);
 }
 
 .navbar-container .navbar .items .nav-item:hover,

@@ -5,7 +5,7 @@ export const Images = {
     "city": require("../assets/city.gif"),
     "portfolioImage": require("../assets/microsoft_cc3.jpg"),
     "star": require("../assets/aestheticstar.png"),
-    "golang": require("../assets/golang2.png"),
+    "web_elements": require("../assets/web_elements.gif"),
     "github": require("../assets/github.png")
 };
 

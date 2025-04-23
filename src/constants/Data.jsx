@@ -2,11 +2,10 @@ import { Colors, Images } from "./Images";
 
 export const cardItems = [
     {
-        "title": "Machine Learning",
+        "title": "Artificial Intelligence & Machine Learning",
         "tech": "PyTorch, Tensorflow",
         "description": `
-            Deep Learning for GenAI applications (NLP and Vision). 
-            Made projects for implementation of core ML algorithms.
+            I am well-versed with core Machine Learning and Deep Learning algorithms and frameworks. I have also developed several GenAI and NLP-based deployed applications.
         `,
         "color": Colors.blue,
         "image": Images.city,
@@ -14,11 +13,10 @@ export const cardItems = [
         "tag": "aiml",
     },
     {
-        "title": "App Development",
-        "tech": "React Native, Redux",
+        "title": "Cross-platform Applications Development",
+        "tech": "React Native, Nativewind, Redux",
         "description": `
-            Seamless UI and efficient functionality for cross-platform applications
-            using React Native. Primary Hackathon skill for me.
+            I use Expo, Nativewind and React Native for developing cross-platform mobile applications with aesthetic UI/UX and smooth performance. I use Supabase utils for database, auth & storage buckets.
         `,
         "color": Colors.green,
         "image": Images.app,
@@ -26,13 +24,13 @@ export const cardItems = [
         "tag": "appdev"
     },
     {
-        "title": "Backend Development",
-        "tech": "Golang, Flask",
+        "title": "Backend Architecture & Integrations",
+        "tech": "Flask, SQL, Supabase",
         "description": `
-            Designing full-fledged web applications with strong backend functionality, APIs, state management & databases.
+            I used Flask framework for spinning backend environment with SQL database connectivity, CORS, APIs & authentication. I am familiar with software deployment and external services integrations.
         `,
-        "color": Colors.aqua,
-        "image": Images.golang,
+        "color": "rgba(81,160,221,255)",
+        "image": Images.web_elements,
         "fontColor": "rgba(0, 0, 0, 0.6)",
         "tag": "webdev"
     },

@@ -8,7 +8,7 @@ const Profile = () => {
         <div className="profile section" id="profile">
             <div className="items">
                 <h2 id="header">
-                        Skills
+                        Technical Skills
                 </h2>
                 <div className="profiledata">
                     {

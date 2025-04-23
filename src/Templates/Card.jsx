@@ -9,7 +9,7 @@ const Card = ({ imgUrl, description, title, color, fontColor, tag, tech }) => {
            /> 
            <div className="content">
                 <h3 style={{ color: fontColor }}>{title}</h3>
-                <h3 style={{ color: fontColor, border: `0.02px solid ${fontColor}`, padding: "0.2rem 1rem", borderRadius: "0.3rem" }}>{tech}</h3>
+                <h3 style={{ color: fontColor, border: `0.02px solid ${fontColor}`, padding: "0.2rem 1rem", borderRadius: "0.3rem", fontSize: 18, letterSpacing: 0.5 }}>{tech}</h3>
                 <p style={{ color: fontColor }}>{description}</p>
            </div>
         </div>
